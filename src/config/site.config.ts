@@ -22,7 +22,10 @@ export interface SiteConfig {
     state: string;
     zip: string;
     country: string;
+    countryAbbr: string;
   };
+  /** Job title for JSON LD */
+  jobTitle: string;
   socialLinks: string[];
   /**
    * Header options. Set `showSocialLinks: true` to render an icon link in the
@@ -34,8 +37,8 @@ export interface SiteConfig {
     showSocialLinks?: boolean;
   };
   twitter?: {
-    site: string;
-    creator: string;
+    site?: string;
+    creator?: string;
   };
   verification?: {
     google?: string;
@@ -244,35 +247,37 @@ export interface SiteConfig {
 }
 
 const siteConfig: SiteConfig = {
-  name: 'Astro Rocket',
+  name: 'GhostForge Dev',
   description:
-    'Astro Rocket is a free, lightning-fast Astro 7 starter theme to build anything on — with 57+ designed components, 12 colour themes, dark mode, and built-in i18n on board.',
-  tagline: 'Astro 7 starter theme to build anything on',
-  footerNote: 'Free & open source · MIT licensed',
-  url: SITE_URL || 'https://astrorocket.dev',
+    'GhostForge Dev by Juan Gamba Saenz. High-performance full-stack web development with PHP (Laravel, Vue.js) & Java (Spring Boot). Systems engineering student portfolio & blog.',
+  tagline: 'Crafting high-performance web applications from concept to deployment.',
+  footerNote: 'GhostForge Dev by Juan Gamba Website',
+  url: SITE_URL || 'https://jdgambas.github.io',
   ogImage: '/og-default.svg',
-  author: 'Hans Martens',
-  email: 'hello@hansmartens.dev',
+  author: 'Juan D. Gamba S.',
+  email: 'jdgambas.desarrollador@gmail.com',
   address: {
     street: '',
-    city: 'Amsterdam',
-    state: '',
+    city: 'Bogota',
+    state: 'Bogota D.C.',
     zip: '',
-    country: 'the Netherlands',
+    country: 'Colombia',
+    countryAbbr: 'CO'
   },
+  jobTitle: 'Web Designer & Developer',
   socialLinks: [
-    'https://github.com/hansmartensdev',
-    'https://x.com/hansmartens_dev',
-    'https://www.linkedin.com',
-    'https://bsky.app/profile/hansmartensdev.bsky.social',
+    'https://github.com/juandgambas',
+    // 'https://x.com/juandgambas_dev',
+    'https://www.linkedin.com/in/juandgambasaenz739149217',
+    // 'https://bsky.app/profile/juandgambasdev.bsky.social',
   ],
   header: {
     // Flip to `true` to show the social icons (incl. GitHub) in the header.
-    showSocialLinks: false,
+    showSocialLinks: true,
   },
   twitter: {
-    site: 'https://x.com/hansmartens_dev',
-    creator: '@hansmartens_dev',
+    // site: 'https://x.com/juandgambas_dev',
+    // creator: '@juandgambas_dev',
   },
   verification: {
     google: GOOGLE_SITE_VERIFICATION,
@@ -346,16 +351,16 @@ const siteConfig: SiteConfig = {
   i18n: i18nConfig,
   branding: {
     logo: {
-      alt: 'Astro Rocket',
-      // image: '/logo.svg', // Optional: set to a file in public/ to use a custom logo image instead of the letter monogram.
+      alt: 'Juan Gamba Dev.',
+      image: '/logo.svg', // Optional: set to a file in public/ to use a custom logo image instead of the letter monogram.
       imageUrl: '/favicon.svg',
     },
     favicon: {
       svg: '/favicon.svg',
     },
     colors: {
-      themeColor: '#0083fe',
-      backgroundColor: '#ffffff',
+      themeColor: '#432DD7',
+      backgroundColor: '#030712',
     },
   },
 };
